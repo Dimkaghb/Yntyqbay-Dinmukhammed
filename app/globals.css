@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #121212;
+  --text-secondary: #7e7e7e;
+  --border-dashed: #e8e8e8;
+  --pill-border: #e3e1e1;
+  --pill-bg: #fafafa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--text-secondary);
+  --color-border-dashed: var(--border-dashed);
+  --color-pill-border: var(--pill-border);
+  --color-pill-bg: var(--pill-bg);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.grid-frame {
+  position: relative;
+}
+
+.grid-frame::before,
+.grid-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 1px dashed var(--border-dashed);
+  pointer-events: none;
+}
+
+.grid-frame::before {
+  left: 0;
+}
+
+.grid-frame::after {
+  right: 0;
+}
