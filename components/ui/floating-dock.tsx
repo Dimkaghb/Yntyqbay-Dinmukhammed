@@ -42,7 +42,7 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="absolute right-0 bottom-full mb-2 flex flex-col gap-2 items-end"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -65,9 +65,9 @@ const FloatingDockMobile = ({
                   href={item.href}
                   key={item.title}
                   onClick={item.onClick}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md border border-border-dashed"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-6 w-6">{item.icon}</div>
                 </a>
               </motion.div>
             ))}
@@ -76,19 +76,19 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg border border-border-dashed hover:bg-gray-50 transition-colors"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-neutral-500 dark:text-neutral-400"
+          className="text-neutral-700"
         >
           <rect width="18" height="18" x="3" y="3" rx="2" />
           <path d="M9 3v18" />

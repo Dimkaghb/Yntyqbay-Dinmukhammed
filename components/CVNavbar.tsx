@@ -175,8 +175,10 @@ export function CVNavbar() {
   ];
 
   return (
-    <div className="fixed bottom-8 left-0 right-0 z-50 flex items-center justify-center">
-      <FloatingDock items={links} />
+    <div className="fixed bottom-8 left-0 right-0 z-50 flex items-center justify-center md:justify-center">
+      <div className="md:mx-auto mx-0 ml-auto mr-6">
+        <FloatingDock items={links} />
+      </div>
     </div>
   );
 }
