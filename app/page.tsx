@@ -37,7 +37,7 @@ export default function Home() {
                   Yntyqbay Dinmukhammed
                 </h1>
                 <h2 className="text-[20px] font-normal tracking-[-0.02em] leading-[1.2em] text-secondary">
-                  Junior+ Software Engineer · AI Full-Stack Developer
+                  Junior+ Software Engineer · AI-Engineer · Full-Stack Developer
                 </h2>
               </div>
             </div>
